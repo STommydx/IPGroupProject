@@ -1,0 +1,233 @@
+body {
+	background-color: #E0E0E0;
+	margin: 0;
+	user-select: none;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+.logo-warpper {
+	background-color: darkorange;
+	background-image: url(gamelogo.jpg);
+	background-position: center;
+	background-size: cover;
+	box-shadow: 0 2px 2px grey;
+	order: 1;
+	width: 100%;
+}
+
+.logo {
+	background-color: rgba(100,100,100,0.6);
+	height: inherit;
+	text-align: center;
+}
+
+.title {
+	color: #FFF;
+	font-family: 'Libre Franklin';
+	font-size: 40px;
+	font-weight: 700;
+	margin: 0;
+	padding-top: 25px;
+	text-shadow: 2px 2px 8px grey;
+}
+
+.subtitle {
+	color: #FFF;
+	font-family: 'Libre Franklin';
+	font-size: 25px;
+	font-weight: 700;
+	margin: 0;
+	padding: 25px;
+	text-shadow: 1px 1px 4px grey;
+}
+
+.nevibar {
+	background-color: rgba(200,200,200,0.5);
+	font-size: 0;
+	left: 0;
+	position: relative;
+	right: 0;
+}
+
+.neviitem {
+	display: inline-block;
+	position: relative;
+}
+
+.nevitog {
+	display: none;
+}
+
+.nevimain {
+	display: flex;
+	justify-content: center;
+}
+
+.nevidata {
+	color: #FFF;
+	cursor: pointer;
+	display: block;
+	font-family: 'Libre Franklin';
+	font-size: 16px;
+	font-weight: bold;
+	min-width: 180px;
+	padding: 12px 0;
+	transition: background-color 0.4s ease;
+}
+
+.highlighted, .nevidata:hover {
+	background-color: rgba(100, 100, 100, 0.6);
+}
+
+.nevibody {
+	background-color: rgba(100, 100, 100, 0.6);
+	left: 0;
+	max-height: 0;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	transform-origin: 0 0 0;
+	transition: max-height 0.8s ease;
+	z-index: 1;
+}
+
+.boardview {
+	margin: 20px auto;
+}
+
+.boardrow {
+	display: flex;
+	justify-content: center;
+}
+
+.boardcol {
+	background-color: #FFF;
+	border-radius: 5px;
+	box-shadow: .5px .5px 8px #B4B4B4;
+	cursor: pointer;
+	font-size: 20px;
+	margin: 5px;
+	min-height: 100px;
+	min-width: 80px;
+	position: relative;
+	text-align: center;
+	transform-style: preserve-3d;
+	transition: transform 0.8s;
+}
+
+.flipped {
+	transform: rotateY(180deg);
+}
+
+.backimg {
+	backface-visibility: hidden;
+	background-color: lightgrey;
+	bottom: 50%;
+	display: block;
+	height: 90px;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%, 50%) rotateY(180deg);
+	width: 70px;
+}
+
+.boardimg {
+	backface-visibility: hidden;
+	background-color: lightgrey;
+	bottom: 50%;
+	display: block;
+	height: 90px;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%, 50%);
+	width: 70px;
+}
+
+.toast {
+	background-color: rgba(100, 100, 100, 0.84);
+	border-radius: 12px;
+	color: #FFF;
+	display: none;
+	font-family: 'Libre Franklin';
+	font-size: 17px;
+	font-weight: bold;
+	padding: 12px 12px;
+}
+
+.toast-warper {
+	bottom: 10%;
+	display: flex;
+	justify-content: center;
+	left: 0;
+	position: fixed;
+	right: 0;
+	z-index: 1;
+}
+
+.maincontent {
+	order: 2;
+	overflow: auto;
+}
+
+.timer {
+	background-color: rgba(100, 100, 100, 0.84);
+	bottom: 0;
+	color: #FFF;
+	font-family: 'Libre Franklin';
+	font-size: 17px;
+	font-weight: bold;
+	min-width: 120px;
+	padding: 12px 12px;
+	position: fixed;
+	right: 0;
+	z-index: 1;
+}
+
+.countdown {
+	color: white;
+	display: none;
+	font-family: 'Libre Franklin';
+	font-size: 90px;
+	font-weight: bolder;
+	text-shadow: 4px 4px 8px grey;
+}
+
+.countdown-warper {
+	display: flex;
+	justify-content: center;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 50%;
+	z-index: 1;
+}
+
+@media screen and (min-width: 720.0001px){
+	.neviitem:hover .nevibody {
+		max-height: 600px;
+	}
+}
+
+@media screen and (max-width: 720px) {
+	.nevimain {
+		display: block;
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.8s ease;
+	}
+	.nevibody {
+		position: relative;
+	}
+	.neviitem, .nevitog {
+		display: block;
+	}
+	.expanded {
+		max-height: 600px;
+	}
+}

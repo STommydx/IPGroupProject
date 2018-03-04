@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Reliable Travel Company</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="theme-color" content="#f98c1f">
+        <script
+			src="https://code.jquery.com/jquery-3.3.1.js"
+			integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+			crossorigin="anonymous"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+	<body>
+		<div class="contaniner">
+			<ul class="nav" style="background-image:url(bg.png)">
+				<li><a href="home" target="content">
+					<img src="sakura-flower.svg" width="80" height="80">
+				</a></li>
+				<li class="header">Reliable Traveling Company</li>
+				<li style="float:right; background-color:crimson"><a class="navhighline" href="#signin">Sign In</a></li>
+			</ul>
+			<ul class="nav">
+				<li class="dropdown">
+					<a class="navhighline dropbtn" href="javascript:void(0)">Tours</a>
+					<div class="dropdown-content">
+						<a class="drophighline" href="#localtours">Local Tours</a>
+						<a class="drophighline" href="#foreigntours">Foreign Tours</a>
+					</div>
+				</li>
+				<li><a class="navhighline" href="#flight">Flight</a></li>
+				<li><a class="navhighline" href="#hotel">Hotel</a></li>
+				<li><a class="navhighline" href="#packages">Packages</a></li>
+				<li class="dropdown">
+					<a class="navhighline dropbtn" href="javascript:void(0)">Other</a>
+					<div class="dropdown-content">
+						<a class="drophighline" href="game" target="content">Games</a>
+						<a class="drophighline" href="#otherservices">Other Services</a>
+					</div>
+				</li>
+				<li><a class="navhighline" href="#contactus">Contact us</a></li>
+				<li><a class="navhighline" href="#aboutus">About us</a></li>
+				<li style="float:right"><a class="navhighline" href="#founder">Founder Page</a></li>
+			</ul>
+			<div class="contentframe-wrapper">
+				<iframe class="contentframe" src="home" name="content"></iframe>
+			</div>
+		</div>
+	</body>
+</html>
