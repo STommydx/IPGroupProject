@@ -25,18 +25,30 @@ git checkout -b feature/yourfeaturename
 git add .
 git status
 ```
-4.  Commit using
-
+4.  Commit the change. A code editor will appear and ask you for commit message.
+```bash
+git commit
+```
 
 Before submitting, you should clean up your work:
 
 1.  Switch to `master` branch, do a pull to update latest changes
+```bash
+git checkout master
+git pull
+```
 2.  Switch back to `feature/yourfeaturename`, run a rebase with master
+```bash
+git rebase master
+```
 3.  Resolve conflicts if needed, seek help if you don't know how to do so
 
-Lastly push the branch to bitbucket and create a PR:
+Lastly push the branch to GitHub and create a PR:
 
-1.  Team -> Push Branch `feature/yourfeaturename`
+1.  Push Branch `feature/yourfeaturename` to GitHub.
+```bash
+git commit -u origin feature/yourfeaturename
+```
 2.  Go to GitHub and create a pull request
 3.  Set the source as `feature/yourfeaturename` and merge into `master`
 4.  Wait for approval!
