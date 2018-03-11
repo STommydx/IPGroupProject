@@ -8,9 +8,9 @@ $(document).ready(() => {
 		}
 	);
 
-	$('.countdown').hide();
-
 });
+
+$(window).on('load', () => $('.countdown').hide())
 
 function preloadImage(url, callback) {
 	let $newimg = $('<img>');
