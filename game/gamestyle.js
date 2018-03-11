@@ -10,9 +10,11 @@ $(document).ready(() => {
 
 });
 
-function preloadImage(url) {
-	$('<img>').attr('src', url);
+function preloadImage(url, callback) {
+	let $newimg = $('<img>');
+	$newimg.attr('src', url);
+	$newimg.on('load', callback);
 }
 
 preloadImage('assets/X.svg');
-for(let i=0;i<8;i++) preloadImage('assets/'+ i + '.jpg');
+for(let i=0;i<8;i++) preloadImage('assets/'+ i + '.jpg', alert(i));
