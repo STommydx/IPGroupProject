@@ -190,12 +190,37 @@ body {
 }
 
 .countdown {
+	display: flex;
+	position: relative;
+	height: 7em;
+	width: 7em;
+	align-items: center;
+	justify-content: center;
+}
+
+.countdown-spinner {
+	border: 12px solid white;
+	border-right: 12px solid darkgrey;
+	border-radius: 50%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.countdown-text {
 	color: white;
-	display: none;
+	display: inline-block;
 	font-family: 'Libre Franklin';
-	font-size: 90px;
+	font-size: 4em;
 	font-weight: bolder;
-	text-shadow: 4px 4px 8px grey;
 }
 
 .countdown-warper {

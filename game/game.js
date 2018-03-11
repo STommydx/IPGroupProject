@@ -36,7 +36,10 @@ var Game = {
 		this.timer = this.TLIMIT * 10;
 		this.matched = 0;
 		BoardView.setTime(this.timer);
-		BoardView.showCountdown(3, () => BoardView.showCountdown(2, () => BoardView.showCountdown(1, () => this.start())));
+		BoardView.toggleCountdown(() => BoardView.showCountdown(3, () => BoardView.showCountdown(2, () => BoardView.showCountdown(1, () => {
+			this.start();
+			BoardView.toggleCountdown();
+		}))));
 	},
 
 	start: function(){
@@ -172,9 +175,13 @@ var BoardView = {
 		setTimeout(callback, 800);
 	},
 
+	toggleCountdown: function(callback) {
+		$('.countdown').fadeToggle('fast', callback);
+	},
+
 	showCountdown: function(text, callback) {
-		$('.countdown').text(text);
-		$('.countdown').fadeIn(300).delay(200).fadeOut(500, callback);
+		$('.countdown-text').text(text);
+		setTimeout(callback, 1000);
 	},
 
 	setTime: function(t) {

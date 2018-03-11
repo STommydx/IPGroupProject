@@ -8,6 +8,8 @@ $(document).ready(() => {
 		}
 	);
 
+	$('.countdown').hide();
+
 });
 
 function preloadImage(url, callback) {
@@ -17,4 +19,4 @@ function preloadImage(url, callback) {
 }
 
 preloadImage('assets/X.svg');
-for(let i=0;i<8;i++) preloadImage('assets/'+ i + '.jpg', alert(i));
+for(let i=0;i<8;i++) preloadImage('assets/'+ i + '.jpg');
