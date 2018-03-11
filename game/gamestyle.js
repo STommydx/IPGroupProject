@@ -9,3 +9,10 @@ $(document).ready(() => {
 	);
 
 });
+
+function preloadImage(url) {
+	$('<img>').attr('src', url);
+}
+
+preloadImage('assets/X.svg');
+for(let i=0;i<8;i++) preloadImage('assets/'+ i + '.jpg');
