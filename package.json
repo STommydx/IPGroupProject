@@ -1,0 +1,23 @@
+{
+  "name": "ipgroupproject",
+  "version": "1.0.0",
+  "description": "IP Group Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"start": "http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/STommydx/IPGroupProject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/STommydx/IPGroupProject/issues"
+  },
+  "homepage": "https://github.com/STommydx/IPGroupProject#readme",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}
