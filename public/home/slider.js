@@ -45,6 +45,9 @@ $(function() {
 
 	$('.close-button').click(function(){
 		$('.drawer').toggleClass('close');
+		setTimeout(function() {
+			$('.drawer-panel').hide();
+		}, 2000);
 	});
 
 
