@@ -1,0 +1,14 @@
+table{
+    background-color: aliceblue;
+}
+.header{
+    font-size: 1.8em;
+    color: midnightblue;
+}
+.content{
+    font-size: 1.2em;
+    color: royalblue;
+}
+.m{
+    color: red;
+}
