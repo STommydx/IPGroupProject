@@ -5,7 +5,7 @@
      <script language="javascript" type="text/javascript">
 
      function setInvisible() {
-          document.getElementById('hotel_list').style.display ='none';
+          document.getElementById('hotel_list').style.display ='block';
      }
 
      function getInfo() {
@@ -23,19 +23,16 @@
 
      function check(x) {
           if (x == "Japan") {
-               document.getElementById('hotel_list').style.display = 'block';
                document.getElementById('japan').style.display = 'block';
                document.getElementById('singapore').style.display = 'none';
                document.getElementById('taiwan').style.display = 'none';
           }
           if (x == "Singapore") {
-               document.getElementById('hotel_list').style.display = 'block';
                document.getElementById('japan').style.display = 'none';
                document.getElementById('singapore').style.display = 'block';
                document.getElementById('taiwan').style.display = 'none';
           }
           if (x == "Taiwan") {
-               document.getElementById('hotel_list').style.display = 'block';
                document.getElementById('singapore').style.display = 'none';
                document.getElementById('japan').style.display = 'none';
                document.getElementById('taiwan').style.display = 'block';
