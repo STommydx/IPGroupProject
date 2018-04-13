@@ -1,0 +1,27 @@
+/*hotel.css*/
+heading {
+
+}
+
+div.filter {
+     padding: 10px;
+     margin: 0px;
+     background-color: #9596FA;
+}
+
+div.hotel_list {
+     background-color: #E6FBFC;
+}
+
+img {
+     width: 300px;
+     height: 150px;
+}
+
+td.price {
+     text-align: center;
+}
+
+table {
+     border-collapse: collapse;
+}

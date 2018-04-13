@@ -10,17 +10,20 @@
 			src="https://code.jquery.com/jquery-3.3.1.js"
 			integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
 			crossorigin="anonymous"></script>
-		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
 	<body>
 		<div class="contaniner">
-			<ul class="nav" style="background-image:url(bg.png)">
-				<li><a href="home" target="content">
-					<img src="sakura-flower.svg" width="80" height="80">
-				</a></li>
-				<li class="header">Reliable Traveling Company</li>
-				<li style="float:right; background-color:crimson"><a class="navhighline" href="#signin">Sign In</a></li>
-			</ul>
+			<div class="top">
+				<div><a href="home.html" target="content">
+					<img src="images/sakura-flower.svg" width="80" height="80">
+				</a></div>
+				<div class="header">Reliable Traveling Company</div>
+				<div class="musicbox">
+					<div class="musicbox-btn"><span>&#x266B;</span></div>
+					<div class="musicbox-audio"><audio autoplay controls loop preload="auto" src="music/bgm.mp3"></audio></div>
+				</div>
+			</div>
 			<ul class="nav">
 				<li class="dropdown">
 					<a class="navhighline dropbtn" href="javascript:void(0)">Tours</a>
@@ -29,23 +32,29 @@
 						<a class="drophighline" href="#foreigntours">Foreign Tours</a>
 					</div>
 				</li>
-				<li><a class="navhighline" href="#flight">Flight</a></li>
-				<li><a class="navhighline" href="#hotel">Hotel</a></li>
-				<li><a class="navhighline" href="pages/packages.html" target="content">Packages</a></li>
+				<li><a class="navhighline" href="flight.html" target="content">Flight</a></li>
+				<li><a class="navhighline" href="hotel.html" target="content">Hotel</a></li>
+				<li><a class="navhighline" href="packages.html" target="content">Packages</a></li>
 				<li class="dropdown">
 					<a class="navhighline dropbtn" href="javascript:void(0)">Other</a>
 					<div class="dropdown-content">
+<<<<<<< HEAD
 						<a class="drophighline" href="game" target="content">Games</a>
 						<a class="drophighline" href="otherservices/index.html" target="content">Other Services</a>
 						<a class="drophighline" href="pages/guestbook.html" target="content">Guestbook</a>
+=======
+						<a class="drophighline" href="game.html" target="content">Games</a>
+						<a class="drophighline" href="otherservices.html" target="content">Other Services</a>
+						<a class="drophighline" href="guestbook.html" target="content">Guestbook</a>
+>>>>>>> master
 					</div>
 				</li>
-				<li><a class="navhighline" href="#contactus">Contact us</a></li>
+				<li><a class="navhighline" href="contactus.html" target="content">Contact us</a></li>
 				<li><a class="navhighline" href="#aboutus">About us</a></li>
 				<li style="float:right"><a class="navhighline" href="#founder">Founder Page</a></li>
 			</ul>
 			<div class="contentframe-wrapper">
-				<iframe class="contentframe" src="home" name="content"></iframe>
+				<iframe class="contentframe" src="home.html" name="content"></iframe>
 			</div>
 		</div>
 	</body>

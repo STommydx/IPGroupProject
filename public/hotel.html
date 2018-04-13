@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+     <title>Reliable Travel Company</title>
+     <link rel="stylesheet" type="text/css" href="css/hotel.css">
+     <script language="javascript" type="text/javascript">
+
+     function setInvisible() {
+          document.getElementById('hotel_list').style.display ='block';
+     }
+
+     function getInfo() {
+          var des = document.getElementById('destination').value;
+          var num = document.getElementById('num_of_people').value;
+          var date_in = document.getElementById('date_in').value;
+          var date_out = document.getElementById('date_out').value;
+
+          check(des);
+     }
+
+     function pop() {
+          window.alert("You have successfully booked for the hotel!");
+     }
+
+     function refresh() {
+          window.location.reload();
+     }
+
+     function check(x) {
+          if (x == "Japan") {
+               document.getElementById('japan').style.display = 'block';
+               document.getElementById('singapore').style.display = 'none';
+               document.getElementById('taiwan').style.display = 'none';
+          }
+          if (x == "Singapore") {
+               document.getElementById('japan').style.display = 'none';
+               document.getElementById('singapore').style.display = 'block';
+               document.getElementById('taiwan').style.display = 'none';
+          }
+          if (x == "Taiwan") {
+               document.getElementById('singapore').style.display = 'none';
+               document.getElementById('japan').style.display = 'none';
+               document.getElementById('taiwan').style.display = 'block';
+          }
+     }
+     </script>
+</head>
+<body onload="setInvisible()">
+     <div class = "filter">
+          Destination:
+          <input type="text" id="destination">
+          &nbsp;
+          Number of people:
+               <select id="num_of_people">
+                    <option value="Please select.">Please select</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5 or more">5 or more</option>
+               </select>
+
+          <br>
+          <br>
+          Check in date:
+          <input type="text" id="date_in" value="dd/mm/yyyy">
+          &nbsp;
+          Check out date:
+          <input type="text" id="date_out" value="dd/mm/yyyy">
+          &nbsp;
+          <input type="button" onclick="getInfo()" value="Search">
+          <input type="button" onclick="refresh()" value="Clear">
+     </div>
+     <br>
+     <div id="hotel_list" class="hotel_list">
+          <div id="japan">
+          <table>
+               <tr>
+                    <td rowspan="4"><img src="images/hotel1.jpg"></td>
+                    <td rowspan="4" width ="5px"></td>
+                    <td width= "55%"><b>ABC Hotel</b></td>
+                    <td class="price" rowspan ="3">Price: $3,000
+                    <br>
+                    <br>
+                    <input type="button" value="Buy This !" onclick="pop()"></td>
+               </tr>
+               <tr>
+                    <td>Address: Building A, District ABC, Tokyo, Japan</td>
+               </tr>
+               <tr>
+                    <td>Services included: Wi-Fi services, laundry service, swimming pool, etc.</td>
+               </tr>
+               <tr>
+                    <td>Rating: 4.8 / 5</td>
+               </tr>
+          </table>
+     </div>
+     <div id="singapore">
+          <table>
+               <tr>
+                    <td rowspan="4"><img src="images/hotel2.jpg"></td>
+                    <td rowspan="4" width ="5px"></td>
+                    <td width= "55%"><b>Ibis Hotel</b></td>
+                    <td class="price" rowspan ="3">Price: $2,500
+                    <br>
+                    <br>
+                    <input type="button" value="Buy This !" onclick="pop()"></td>
+               </tr>
+               <tr>
+                    <td>Address: Street A, District 123, Singapore</td>
+               </tr>
+               <tr>
+                    <td>Services included: Wi-Fi services, Free shuttle bus service, etc.</td>
+               </tr>
+               <tr>
+                    <td>Rating: 3.8 / 5</td>
+               </tr>
+          </table>
+     </div>
+     <div id="taiwan">
+          <table>
+               <tr>
+                    <td rowspan="4"><img src="images/hotel3.jpg"></td>
+                    <td rowspan="4" width ="5px"></td>
+                    <td width= "55%"><b>Hotel Pa Pa Whale</b></td>
+                    <td class="price" rowspan ="3">Price: $2,800
+                    <br>
+                    <br>
+                    <input type="button" value="Buy This !" onclick="pop()"></td>
+               </tr>
+               <tr>
+                    <td>Address: Street A, WanHua District, Taiwan</td>
+               </tr>
+               <tr>
+                    <td>Services included: Wi-Fi services, Gym, etc.</td>
+               </tr>
+               <tr>
+                    <td>Rating: 4.2 / 5</td>
+               </tr>
+          </table>
+     </div>
+     </div>
+</body>
+</html>
