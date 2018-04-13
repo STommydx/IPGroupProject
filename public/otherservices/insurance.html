@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--    <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script> -->
+</head>
+
+<body>
+    <div id="quote">
+        <div class="row">
+            <h1>Get a quote now</h1>
+            <!-- TODO Implement ScrollIntoView -->
+            <p>Or read more about the insurance policy <a href="#policy">here</a>
+            </p>
+        </div>
+        <div class="row">
+            <div class="column">
+                <h2>About your trip</h2>
+                <h3>Where are you travelling?</h3>
+                <input type="radio" value="area1" name="areaType">Within Earth
+                <input type="radio" value="area2" name="areaType">Within and beyond Earth
+                <h3>Departure date</h3>
+                <!-- TODO Restrict the date -->
+                <input type="date" value="1">
+            </div>
+            <div class="column">
+                <h2>Choose who to cover</h2>
+                <h3>How many people are travelling?</h3>
+                <input type="number" value="1">
+            </div>
+        </div>
+        <div class="row">
+            <button style="clear: both">Get a quote</button>
+        </div>
+    </div>
+    <!-- Quote detail -->
+    <div id="quote-result">
+        <h1 class="row">Your quote</h1>
+        <h2 class="row">$300</h2>
+    </div>
+    <hr>
+    <!-- Insurance detail -->
+    <div id="policy">
+        <h1>Insurance policy detail</h1>
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Coverage</button>
+            <button class="tablinks" onclick="openCity(event, 'Paris')">Major exclusions</button>
+            <button class="tablinks" onclick="openCity(event, 'Tokyo')">Eligibility</button>
+        </div>
+        <div id="London" class="tabcontent">
+            <h3>London</h3>
+            <p>London is the capital city of England.</p>
+        </div>
+        <div id="Paris" class="tabcontent">
+            <h3>Paris</h3>
+            <p>Paris is the capital of France.</p>
+        </div>
+        <div id="Tokyo" class="tabcontent">
+            <h3>Tokyo</h3>
+            <p>Tokyo is the capital of Japan.</p>
+        </div>
+    </div>
+    <script>
+    function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+    </script>
+</body>
+
+</html>
