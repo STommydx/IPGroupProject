@@ -10,9 +10,46 @@
 			src="https://code.jquery.com/jquery-3.3.1.js"
 			integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
 			crossorigin="anonymous"></script>
+      <script src="js/cookie1.js"></script>
+
 		<link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
-	<body>
+	<body onload="checkCookie()" class="popupcookiebody">
+    <div id="backmodal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="popupclose" id="span11">&times;</span>
+          <h2>Welcome Back</h2><h2 id="yournamehere"></h2>
+          <p id="vistim"></p>
+        </div>
+        <div class="modal-body">
+          <p>Here is some news just for you!</p>
+          <img src="" id="ads" class="popupimage">
+          <p id="adsdes"></p>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="popupclose" id="span22">&times;</span>
+          <h2>Welcome!</h2>
+        </div>
+        <div class="modal-body">
+          <p>Seems you are the first time visiting this website</p>
+          <p>Register to get more information!😁😁😁</p>
+          <form class="popupcookieform">
+            Username: <input class="popupclassinput" type="text" name="uname" id="user"><br>
+            <input class="popupclassinput1" type="button" value="Submit" id="submit" onclick="putCookie(document.getElementsByTagName('form'))">
+          </form>
+          </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
 		<div class="contaniner">
 			<div class="top">
 				<div><a href="home.html" target="content">
@@ -51,5 +88,6 @@
 				<iframe class="contentframe" src="home.html" name="content"></iframe>
 			</div>
 		</div>
+    <script src="js/cookie2.js"></script>
 	</body>
 </html>
