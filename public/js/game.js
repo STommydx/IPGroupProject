@@ -145,14 +145,14 @@ var BoardView = {
 
 				$('#' + sj).append($('<img>', {
 					class: 'backimg',
-					src: 'assets/'+ pic[i][j] +'.jpg',
+					src: 'images/'+ pic[i][j] +'.jpg',
 					alt: 'image-' + pic[i][j],
 					draggable: 'false'
 				}));
 
 				$('#' + sj).append($('<img>', {
 					class: 'boardimg',
-					src: 'assets/X.svg',
+					src: 'images/X.svg',
 					alt: 'closed',
 					draggable: 'false'
 				}));
