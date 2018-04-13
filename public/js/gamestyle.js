@@ -18,5 +18,5 @@ function preloadImage(url, callback) {
 	$newimg.on('load', callback);
 }
 
-preloadImage('assets/X.svg');
-for(let i=0;i<8;i++) preloadImage('assets/'+ i + '.jpg');
+preloadImage('images/X.svg');
+for(let i=0;i<8;i++) preloadImage('images/'+ i + '.jpg');
