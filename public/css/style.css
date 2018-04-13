@@ -29,12 +29,13 @@ body{
 
 .header{
 	font-family: comic sans ms;
-	font-size: 40px;
+	font-size: 2em;
 	color: white;
-	padding: 20px 16px
+	padding: 20px 16px;
 }
 
 .nav{
+	position: relative;
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
@@ -83,4 +84,40 @@ li.dropdown{
 
 .dropdown:hover .dropdown-content{
 	display: block;
+}
+
+.musicbox {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	display: flex;
+}
+
+.musicbox .musicbox-audio {
+	max-width: 0px;
+	transition: max-width ease 0.5s;
+	display: flex;
+}
+
+.musicbox:hover .musicbox-audio {
+	max-width: 500px;
+}
+
+.musicbox-btn {
+	background-color: crimson;
+	display: flex;
+	align-items: center;
+}
+
+.musicbox-btn span {
+	color: white;
+	font-size: 1.2em;
+	padding: 0 0.5em;
+}
+
+.top {
+	background-image:url(../images/bg.png);
+	display: flex;
+	position: relative;
+	overflow: hidden;
 }
