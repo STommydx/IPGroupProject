@@ -22,6 +22,10 @@
           window.alert("You have successfully booked for the hotel!");
      }
 
+     function refresh() {
+          window.location.reload();
+     }
+
      function check(x) {
           if (x == "Japan") {
                document.getElementById('japan').style.display = 'block';
@@ -65,6 +69,7 @@
           <input type="text" id="date_out" value="dd/mm/yyyy">
           &nbsp;
           <input type="button" onclick="getInfo()" value="Search">
+          <input type="button" onclick="refresh()" value="Clear">
      </div>
      <br>
      <div id="hotel_list" class="hotel_list">
