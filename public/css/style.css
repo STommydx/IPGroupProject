@@ -121,6 +121,16 @@ li.dropdown{
 	overflow: hidden;
 }
 
+.liveclock {
+	color: white;
+	font-size: 1em;
+	padding: 0.5em;
+	background-color: crimson;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
 .popupcookiebody{font-family: sans-serif;}
 
 .popupcookieform{
