@@ -12,7 +12,7 @@ body {
 
 .logo-warpper {
 	background-color: darkorange;
-	background-image: url(images/gamelogo.jpg);
+	background-image: url(../images/gamelogo.jpg);
 	background-position: center;
 	background-size: cover;
 	box-shadow: 0 2px 2px grey;
