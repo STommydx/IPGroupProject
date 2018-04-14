@@ -48,7 +48,12 @@
 <body onload="setInvisible()">
      <div class = "filter">
           Destination:
-          <input type="text" id="destination">
+          <input list="text" id="destination" name="text">
+          <datalist id="text">
+               <option value="Japan">
+               <option value="Singapore">
+               <option value="Taiwan">
+          </datalist>
           &nbsp;
           Number of people:
                <select id="num_of_people">
