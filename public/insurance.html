@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/otherservices.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="#quote" class="quote section">
+        <h1>Get a quote now</h1>
+        <!-- TODO Implement ScrollIntoView -->
+        <p>Or read more about the insurance policy <a href="#insuranceLink">here</a>
+        </p>
+        <div class="row">
+            <div class="col">
+                <h2>About your trip</h2>
+                <h3>Where are you travelling?</h3>
+                <input type="radio" value="area1" name="areaType">Asia only
+                <input type="radio" value="area2" name="areaType">Worldwide
+                <h3>Departure date</h3>
+                <!-- TODO Restrict the date -->
+                <input type="date" value="1">
+            </div>
+            <div class="col">
+                <h2>Choose who to cover</h2>
+                <h3>How many people are travelling?</h3>
+                <input type="number" value="1">
+            </div>
+        </div>
+        <div class="button">Get a quote</div>
+        <!-- Quote detail -->
+    </div>
+    <div class="quote-result section hidden">
+        <h1>Your quote</h1>
+        <p>$300</p>
+    </div>
+    <!-- Insurance detail -->
+    <div class="insurance section">
+        <div id="insuranceLink"></div>
+        <h1>Insurance policy details</h1>
+        <div class="row">
+            <div class="tab">
+                <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Coverage</button>
+                <button class="tablinks" onclick="openCity(event, 'Paris')">Major exclusions</button>
+                <button class="tablinks" onclick="openCity(event, 'Tokyo')">Eligibility</button>
+            </div>
+            <div id="London" class="tabcontent">
+                <p>Medical expenses up to HKD 1 billion</p>
+                <p>Baggage loss or damage up to HKD 100,000</p>
+                <p>Golfing hole-in-one</p>
+                <p>Flight Delays</p>
+            </div>
+            <div id="Paris" class="tabcontent">
+                <p>Natural Disasters</p>
+                <p>Riots</p>
+                <p>Hazardous sports such as cycling with Bacon</p>
+            </div>
+            <div id="Tokyo" class="tabcontent">
+                <p>No criminal background</p>
+                <p>Aged below 100</p>
+            </div>
+        </div>
+    </div>
+    <script>
+    function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+
+    // 
+    $('.button').click(function() {
+        $('.quote-result').toggleClass('hidden');
+    });
+    </script>
+</body>
+
+</html>
