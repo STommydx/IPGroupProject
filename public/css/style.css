@@ -222,10 +222,29 @@ li.dropdown{
     height: auto;
   }
 
-@media screen and (max-width: 576px) {
+.float-right {
+	float: right;
+}
+
+
+@media screen and (max-width: 576px){
+
 	.top {
 		justify-content: center;
 		background-size: auto;
+	}
+
+	.nav li {
+		display: block;
+		float: none;
+	}
+
+	.nav a {
+		display: block;
+	}
+
+	.dropdown-content {
+		position: relative;
 	}
 }
 

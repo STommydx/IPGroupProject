@@ -223,12 +223,9 @@ body {
   height: 100%;
   opacity: 0;
 }
-<<<<<<< HEAD
-=======
 
 @media screen and (max-width: 576px){
 	.close-button {
 		font-size: 1em;
 	}
 }
->>>>>>> Make popup and mars responsive
