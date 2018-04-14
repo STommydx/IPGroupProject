@@ -14,16 +14,21 @@
 		<link rel="stylesheet" type="text/css" href="css/login.css">
     </head>
 	<body>
-		<form action="founder.html" onsubmit="return validate()">
-			<div>
-				<label for="username">Username</label>
-				<input id="username" required />
+		<div class="container">
+			<div class="card">
+				<div class="card-title">Founder Page Login</div>
+				<form class="card-form" action="founder.html" onsubmit="return validate()">
+					<div class="card-item">
+						<label class="card-label" for="username">Username</label>
+						<input class="card-input" id="username" required />
+					</div>
+					<div class="card-item">
+						<label class="card-label" for="password">Password</label>
+						<input class="card-input" id="password" type="password" required />
+					</div>
+					<div class="card-item2"><button class="card-button" type="submit">Login</button></div>
+				</form>
 			</div>
-			<div>
-				<label for="password">Password</label>
-				<input id="password" type="password" required />
-			</div>
-			<button type="submit">Submit</button>
-		</form>
+		</div>
 	</body>
 </html>
