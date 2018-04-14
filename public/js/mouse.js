@@ -21,4 +21,6 @@ function animateCircles (event){
 
 			circle.style.opacity = 0;
 
+			setTimeout(() => $(circle).remove(), 200);
+
 		}
