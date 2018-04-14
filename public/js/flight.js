@@ -60,3 +60,11 @@ $(function() {
     }, 5000);
 
 });
+
+function buy(){
+		alert("You have successfully buy this service!");
+}
+
+function preorder(){
+		alert("You have successfully preordered this service!");
+}
