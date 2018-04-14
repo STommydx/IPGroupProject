@@ -93,7 +93,8 @@ body {
 
 .caption-drawer {
 	font-size: 48px;
-	top: 20%;
+	font-size: 4.8vw;
+	top: 15%;
 	right: 11%;
 }
 
@@ -111,20 +112,17 @@ body {
 
 .drawer-panel {
 	overflow: hidden;
-	height: 300px;
+	display: flex;
+	justify-content: center;
 	position: fixed;
-	width: 100vw;
+	width: 100%;
 	bottom: 0;
 }
 
 .drawer {
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
+	position: relative;
 	bottom: 0;
-	height: 300px;
-	/*width: 100vw;*/
-	/*overflow: hidden;*/
+	width: 80%;
 	transition: all 2s;
 	background-color: #333;
 	/*padding: 60px;*/
@@ -132,17 +130,16 @@ body {
 }
 
 .close {
-	position: absolute;
 	bottom: -300px;
 }
 
 .close-button {
-	margin: 20px;
+	margin: 1%;
 	position: absolute;
 	right: 0;
 	top: 0;
 	display: block;
-	font-size: 40px;
+	font-size: 4vw;
 	cursor: pointer;
 	color: darkgrey;
 }
@@ -158,8 +155,8 @@ body {
 }
 
 .drawer img {
-	height: 100%;
-	width: auto;
+	width: 100%;
+	height: auto;
 }
 
 .cardtable {
@@ -226,3 +223,12 @@ body {
   height: 100%;
   opacity: 0;
 }
+<<<<<<< HEAD
+=======
+
+@media screen and (max-width: 576px){
+	.close-button {
+		font-size: 1em;
+	}
+}
+>>>>>>> Make popup and mars responsive
