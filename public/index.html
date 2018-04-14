@@ -10,11 +10,22 @@
 			src="https://code.jquery.com/jquery-3.3.1.js"
 			integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
 			crossorigin="anonymous"></script>
-      <script src="js/cookie1.js"></script>
+		<script src="js/cookie1.js"></script>
+		<style>
+		.circle {
+		  width: 20px;
+		  height: 20px;
+		  background-color: lightblue;
+		  border: 1px solid #000;
+		  position: absolute;
+		  border-radius: 15px;
+		}
+		</style>
+	  	<script src="js/mouse.js"></script>
 	  	<script src="js/clock.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
-	<body onload="checkCookie()" class="popupcookiebody">
+<body onload="checkCookie()" class="popupcookiebody">
     <div id="backmodal" class="modal">
       <div class="modal-content">
         <div class="modal-header">
@@ -32,27 +43,27 @@
       </div>
     </div>
 
-    <div id="myModal" class="modal">
-      <div class="modal-content">
-        <div class="modal-header">
-          <span class="popupclose" id="span22">&times;</span>
-          <h2>Welcome!</h2>
-        </div>
-        <div class="modal-body">
-          <p>Seems you are the first time visiting this website</p>
-          <p>Register to get more information!😁😁😁</p>
-          <form class="popupcookieform">
-            Username: <input class="popupclassinput" type="text" name="uname" id="user"><br>
-            <input class="popupclassinput1" type="button" value="Submit" id="submit" onclick="putCookie(document.getElementsByTagName('form'))">
-          </form>
-          </div>
-        <div class="modal-footer">
-        </div>
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="popupclose" id="span22">&times;</span>
+        <h2>Welcome!</h2>
+      </div>
+      <div class="modal-body">
+        <p>Seems you are the first time visiting this website</p>
+        <p>Register to get more information!😁😁😁</p>
+        <form class="popupcookieform">
+          Username: <input class="popupclassinput" type="text" name="uname" id="user"><br>
+          <input class="popupclassinput1" type="button" value="Submit" id="submit" onclick="putCookie(document.getElementsByTagName('form'))">
+        </form>
+      </div>
+      <div class="modal-footer">
       </div>
     </div>
-		<div class="contaniner">
-			<div class="top">
-				<div><a href="home.html" target="content">
+  </div>
+  <div class="contaniner">
+    <div class="top">
+      <div><a href="home.html" target="content">
 					<img src="images/sakura-flower.svg" width="80" height="80">
 				</a></div>
 				<div class="header">Reliable Traveling Company</div>
@@ -66,8 +77,8 @@
 				<li class="dropdown">
 					<a class="navhighline dropbtn" href="javascript:void(0)">Tours</a>
 					<div class="dropdown-content">
-						<a class="drophighline" href="#localtours">Local Tours</a>
-						<a class="drophighline" href="#foreigntours">Foreign Tours</a>
+						<a class="drophighline" href="localtours.html" target="content">Local Tours</a>
+			            <a class="drophighline" href="foreigntours.html" target="content">Foreign Tours</a>
 					</div>
 				</li>
 				<li><a class="navhighline" href="flight.html" target="content">Flight</a></li>
