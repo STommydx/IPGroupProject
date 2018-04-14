@@ -55,8 +55,33 @@ $(function() {
     	$('.drawer').toggleClass('close');
     }, 2000);
 
-    setInterval(function (){
-    	triggers[1].click();
-    }, 5000);
+    // setInterval(function (){
+    // 	triggers[1].click();
+    // }, 5000);
 
+    // Fade in slideshow
+
+    $('.fadein-slider-item').filter(':last').css({opacity:  1});
+
+    var fadeinItem = $('.fadein-slider-item');
+	var index = 0;
+	var length = fadeinItem.length;
+
+	setInterval(function (){
+
+		var loop = index >= length ? true : false;
+		if(loop) {
+			index = 0
+		}
+
+    	fadeinItem.eq(index).animate({
+    		opacity: 1},
+    		"slow", function() {
+    	});
+    	fadeinItem.eq(index-1).animate({
+    		opacity: 0},
+    		"slow", function() {
+    	});
+    	index++;
+    }, 5000);
 });
