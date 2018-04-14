@@ -3,58 +3,123 @@
     <head>
         <title>Reliable Travel Company</title>
         <link rel="stylesheet" type="text/css" href="css/packages.css">
+        <script language="javascript" type="text/javascript">
+            function book(){
+                alert("You have successfully booked for this package!");
+            }
+        </script>
     </head>
     <body>
         <table>
             <tr>
-                <td width="50%">
-                    <img src="images\alishantour.jpg">
+                <td width="35%" rowspan="2">
+                    <img src="images/alishantour.jpg" onmouseover="this.src='images/alishantour2.jpg'" onmouseout="this.src='images/alishantour.jpg'">
                 </td>
-                <td width="50%">
-                    <p class="header"><b>Taiwan Alishan Tour for 3days</b></p>
+                <td width="50%" colspan="2">
+                    <b class="heading">Taiwan Alishan Tour for 3days</b>
                     <p class="content">
-                        Tour Date: May. 5, 2018 - May. 7, 2018 <b class="r">Guaranteed departure!</b><br/>
-                        Price: HKD 7,000 <b class="r">→HKD 5,388 Early bird discount!</b>
+                        Tour Date: May. 05, 2018 - May. 07, 2018<br/>
+                        <b class="r">Guaranteed departure!</b>
                     </p>
+                </td>
+                <td width="15%" rowspan="2" align="center">
+                        <del>HKD 7,000</del><br/>
+                        <b class="r">HKD 5,388</b><br/><br/>
+                        <input type="button" value="BOOK NOW!" onclick="book()">
                 </td>
             </tr>
             <tr>
                 <td>
-                    <img src="images\jejutour.jpg">
+                    <b class="subheading">Hotal:</b><br/>
+                    Hotel Pa Pa Whale
                 </td>
                 <td>
-                    <p class="header"><b>South Korea Jeju Tour for 5days</b></p>
+                    <b class="subheading">Flight:</b><br/>
+                    EVA Air (BR)
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2">
+                    <img src="images/jejutour.jpg" onmouseover="this.src='images/jejutour2.jpg'" onmouseout="this.src='images/jejutour.jpg'">
+                </td>
+                <td colspan="2">
+                    <b class="heading">South Korea Jeju Tour for 5days</b>
                     <p class="content">
-                        Tour Date: May. 4, 2018 - May. 8, 2018 <b class="r">Guaranteed departure!</b><br/>
-                        Tour Date: May. 13, 2018 - May. 17, 2018 <b class="r">Guaranteed departure!</b><br/>
-                        Price: HKD 12,000 <b class="r">→HKD 9,888 Early bird discount!</b>
+                        Tour Date: May. 04, 2018 - May. 08, 2018<br/>
+                        <b class="r">Guaranteed departure!</b><br/><br/>
+                        Tour Date: May. 13, 2018 - May. 17, 2018
                     </p>
+                </td>
+                <td rowspan="2" align="center">
+                    <del>HKD 12,000</del><br/>
+                    <b class="r">HKD 9,888</b><br/><br/>
+                    <input type="button" value="BOOK NOW!" onclick="book()">
                 </td>
             </tr>
             <tr>
                 <td>
-                    <img src="images\sakuratour.jpeg">
+                    <b class="subheading">Hotal:</b><br/>
+                    Shilla Stay Jeju
                 </td>
                 <td>
-                    <p class="header"><b>Japan Sakura Tour for 6days</b></p>
+                    <b class="subheading">Flight:</b><br/>
+                    Korean Air (KE)
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2">
+                    <img src="images/sakuratour.jpeg" onmouseover="this.src='images/sakuratour2.jpg'" onmouseout="this.src='images/sakuratour.jpeg'">
+                </td>
+                <td colspan="2">
+                    <b class="heading">Japan Sakura Tour for 6days</b>
                     <p class="content">
-                        Tour Date: May. 25, 2018 - May. 30, 2018 <b class="r">SOLD OUT!</b><br/>
-                        Tour Date: June. 01, 2018 - June. 06, 2018 <b class="r">Guaranteed departure!</b><br/>
-                        Price: HKD 14,000 <b class="r">→HKD 12,999 Early bird discount!</b>
+                        <del>Tour Date: April. 27, 2018 - May. 02, 2018</del> <b class="r">SOLD OUT!</b><br/><br/>
+                        Tour Date: April. 28, 2018 - May. 03, 2018<br/>
+                        <b class="r">Guaranteed departure!</b>
                     </p>
+                </td>
+                <td rowspan="2" align="center">
+                    <del>HKD 14,000</del><br/>
+                    <b class="r">HKD 12,888</b><br/><br/>
+                    <input type="button" value="BOOK NOW!" onclick="book()">
                 </td>
             </tr>
             <tr>
                 <td>
-                    <img src="images\tokyotour.jpeg">
+                    <b class="subheading">Hotal:</b><br/>
+                    Tokyu Stay Ikebukuro
                 </td>
                 <td>
-                    <p class="header"><b>Japan Tokyo Tour for 3days</b></p>
+                    <b class="subheading">Flight:</b><br/>
+                    Hong Kong Airlines (HX)
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2">
+                    <img src="images/tokyotour.jpeg" onmouseover="this.src='images/tokyotour2.jpg'" onmouseout="this.src='images/tokyotour.jpeg'">
+                </td>
+                <td colspan="2">
+                    <b class="heading">Japan Tokyo Tour for 3days</b>
                     <p class="content">
-                        Tour Date: May. 25, 2018 - May. 27, 2018 <b class="r">Guaranteed departure!</b><br/>
-                        Tour Date: May. 28, 2018 - May. 30, 2018 <b class="r">Guaranteed departure!</b><br/>
-                        Price: HKD 9,500 <b class="r">→HKD 7,888 Early bird discount!</b>
+                        Tour Date: May. 25, 2018 - May. 27, 2018<br/><br/>
+                        Tour Date: May. 28, 2018 - May. 30, 2018<br/>
+                        <b class="r">Guaranteed departure!</b>
                     </p>
+                </td>
+                <td rowspan="2" align="center">
+                    <del>HKD 9,500</del><br/>
+                    <b class="r">HKD 7,888</b><br/><br/>
+                    <input type="button" value="BOOK NOW!" onclick="book()">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b class="subheading">Hotal:</b><br/>
+                    ABC Hotel
+                </td>
+                <td>
+                    <b class="subheading">Flight:</b><br/>
+                    Hong Kong Airlines (HX)
                 </td>
             </tr>
         </table>

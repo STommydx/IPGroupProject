@@ -1,18 +1,36 @@
 table{
     background-color: aliceblue;
 }
-.header{
-    font-size: 1.8em;
+
+td{
+    padding: 3px;
+}
+
+.heading{
+    font-size: 1.6em;
     color: midnightblue;
 }
+
+.subheading{
+    font-size: 1.1em;
+    color: midnightblue;
+}
+
 .content{
-    font-size: 1.2em;
+    font-size: 1.1em;
     color: royalblue;
 }
+
 .r{
+    font-size: 1.1em;
     color: red;
 }
+
 img{
-    width: 460px;
-    height: 345px;
+    width: 100%;
+}
+
+del{
+    text-decoration: line-through;
+    text-decoration-color: red;
 }

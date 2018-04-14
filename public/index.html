@@ -11,7 +11,7 @@
 			integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
 			crossorigin="anonymous"></script>
       <script src="js/cookie1.js"></script>
-
+	  	<script src="js/clock.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
 	<body onload="checkCookie()" class="popupcookiebody">
@@ -24,7 +24,7 @@
         </div>
         <div class="modal-body">
           <p>Here is some news just for you!</p>
-          <img src="" id="ads" class="popupimage">
+          <img id="ads" class="popupimage">
           <p id="adsdes"></p>
         </div>
         <div class="modal-footer">
@@ -56,6 +56,7 @@
 					<img src="images/sakura-flower.svg" width="80" height="80">
 				</a></div>
 				<div class="header">Reliable Traveling Company</div>
+				<div class="liveclock">00:00:00</div>
 				<div class="musicbox">
 					<div class="musicbox-btn"><span>&#x266B;</span></div>
 					<div class="musicbox-audio"><audio autoplay controls loop preload="auto" src="music/bgm.mp3"></audio></div>
@@ -76,12 +77,11 @@
 					<a class="navhighline dropbtn" href="javascript:void(0)">Other</a>
 					<div class="dropdown-content">
 						<a class="drophighline" href="game.html" target="content">Games</a>
-						<a class="drophighline" href="#otherservices">Other Services</a>
+						<a class="drophighline" href="otherservices.html" target="content">Other Services</a>
 						<a class="drophighline" href="guestbook.html" target="content">Guestbook</a>
 					</div>
 				</li>
 				<li><a class="navhighline" href="contactus.html" target="content">Contact us</a></li>
-				<li><a class="navhighline" href="#aboutus">About us</a></li>
 				<li style="float:right"><a class="navhighline" href="#founder">Founder Page</a></li>
 			</ul>
 			<div class="contentframe-wrapper">
