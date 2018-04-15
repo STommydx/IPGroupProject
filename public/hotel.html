@@ -47,15 +47,15 @@
 </head>
 <body onload="setInvisible()">
      <div class = "filter">
-          Destination:
-          <input list="text" id="destination" name="text">
+          <div class="filter-item"><label for="destination">Destination:</label>
+          <input type="text" list="text" id="destination" name="text">
           <datalist id="text">
-               <option value="Japan">
-               <option value="Singapore">
-               <option value="Taiwan">
+               <option value="Japan"></option>
+               <option value="Singapore"></option>
+               <option value="Taiwan"></option>
           </datalist>
-          &nbsp;
-          Number of people:
+          </div>
+          <div class="filter-item"><label for="num_of_people">Number of people:</label>
                <select id="num_of_people">
                     <option value="Please select.">Please select</option>
                     <option value="1">1</option>
@@ -64,15 +64,15 @@
                     <option value="4">4</option>
                     <option value="5 or more">5 or more</option>
                </select>
-
-          <br>
-          <br>
-          Check in date:
-          <input type="text" id="date_in" value="dd/mm/yyyy">
-          &nbsp;
-          Check out date:
-          <input type="text" id="date_out" value="dd/mm/yyyy">
-          &nbsp;
+	      </div>
+          <div class="filter-item">
+	      <label for="date_in">Check in date:</label>
+          <input type="date" id="date_in">
+          </div>
+          <div class="filter-item">
+			  <label for="date_out">Check out date:</label>
+          <input type="date" id="date_out">
+          </div>
           <input type="button" onclick="getInfo()" value="Search">
           <input type="button" onclick="refresh()" value="Clear">
      </div>
@@ -96,7 +96,7 @@
                     <td>Services included: Wi-Fi services, laundry service, swimming pool, etc.</td>
                </tr>
                <tr>
-                    <td>Rating: 4.8 / 5</td>
+                    <td>Rating: <img class="rating" src="images/48star.png"></td>
                </tr>
           </table>
      </div>
@@ -118,7 +118,7 @@
                     <td>Services included: Wi-Fi services, Free shuttle bus service, etc.</td>
                </tr>
                <tr>
-                    <td>Rating: 3.8 / 5</td>
+                    <td>Rating: <img class="rating" src="images/38star.png"></td>
                </tr>
           </table>
      </div>
@@ -140,7 +140,7 @@
                     <td>Services included: Wi-Fi services, Gym, etc.</td>
                </tr>
                <tr>
-                    <td>Rating: 4.2 / 5</td>
+                    <td>Rating: <img class="rating" src="images/42star.png"></td>
                </tr>
           </table>
      </div>
