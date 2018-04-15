@@ -1,5 +1,6 @@
 body{
 	margin: 0;
+	overflow: hidden;
 }
 
 .contaniner {
@@ -233,4 +234,13 @@ li.dropdown{
 	display: block;
 	height: 50px;
 	overflow: hidden;
+}
+
+.circle {
+	width: 20px;
+	height: 20px;
+	background-color: lightblue;
+	border: 1px solid blue;
+	position: absolute;
+	border-radius: 15px;
 }
