@@ -165,7 +165,9 @@ body {
 }
 
 .card {
+	position: relative;
 	margin: 0.5em;
+	box-shadow: 1px 1px 1px lightgray;
 }
 
 .card img {
@@ -173,12 +175,28 @@ body {
 	height: 100%;
 }
 
-.card:link img {
-	opacity: 1.0;
+.card .card-cap {
+	padding: 1em;
+	opacity: 0;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 50%);
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transition: opacity 0.5s ease;
+	color: rgba(255, 255, 255, 0.8);
 }
 
-.card:hover img{
-	opacity: 0.6;
+.card-captitle {
+	font-weight: bold;
+	font-size: 1.2em;
+	color: rgba(255, 255, 255, 0.9);
+	margin-bottom: 0.1em;
+}
+
+.card:hover .card-cap {
+	opacity: 1;
 }
 
 .card-l {
