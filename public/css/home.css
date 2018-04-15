@@ -9,7 +9,6 @@ body {
 	position: relative;
 	overflow: hidden;
 	width: 100vw;
-	height: 200px;
 }
 
 .slider {
@@ -39,13 +38,6 @@ body {
 	height: auto;
 }
 
-@media screen and (max-width: 720px) {
-	.slider-item img {
-		width: auto;
-		height: 100%;
-	}
-}
-
 .panel-button {
 	display: inline-block;
 	position: absolute;
@@ -71,7 +63,7 @@ body {
 }
 
 .caption {
-	font-size: 3em;
+	font-size: 5vw;
 	font-family: helvetica;
 	position: absolute;
 	font-weight: bold;
@@ -93,7 +85,8 @@ body {
 
 .caption-drawer {
 	font-size: 48px;
-	top: 20%;
+	font-size: 4.8vw;
+	top: 15%;
 	right: 11%;
 }
 
@@ -111,20 +104,17 @@ body {
 
 .drawer-panel {
 	overflow: hidden;
-	height: 300px;
+	display: flex;
+	justify-content: center;
 	position: fixed;
-	width: 100vw;
+	width: 100%;
 	bottom: 0;
 }
 
 .drawer {
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
+	position: relative;
 	bottom: 0;
-	height: 300px;
-	/*width: 100vw;*/
-	/*overflow: hidden;*/
+	width: 80%;
 	transition: all 2s;
 	background-color: #333;
 	/*padding: 60px;*/
@@ -132,17 +122,16 @@ body {
 }
 
 .close {
-	position: absolute;
 	bottom: -300px;
 }
 
 .close-button {
-	margin: 20px;
+	margin: 1%;
 	position: absolute;
 	right: 0;
 	top: 0;
 	display: block;
-	font-size: 40px;
+	font-size: 4vw;
 	cursor: pointer;
 	color: darkgrey;
 }
@@ -158,8 +147,8 @@ body {
 }
 
 .drawer img {
-	height: 100%;
-	width: auto;
+	width: 100%;
+	height: auto;
 }
 
 .cardtable {
@@ -175,7 +164,10 @@ body {
 }
 
 .card {
+	display: block;
+	position: relative;
 	margin: 0.5em;
+	box-shadow: 1px 1px 1px lightgray;
 }
 
 .card img {
@@ -183,12 +175,28 @@ body {
 	height: 100%;
 }
 
-.card:link img {
-	opacity: 1.0;
+.card .card-cap {
+	padding: 1em;
+	opacity: 0;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 50%);
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transition: opacity 0.5s ease;
+	color: rgba(255, 255, 255, 0.8);
 }
 
-.card:hover img{
-	opacity: 0.6;
+.card-captitle {
+	font-weight: bold;
+	font-size: 1.2em;
+	color: rgba(255, 255, 255, 0.9);
+	margin-bottom: 0.1em;
+}
+
+.card:hover .card-cap {
+	opacity: 1;
 }
 
 .card-l {
@@ -204,7 +212,7 @@ body {
   position: relative;*/
   width: 100vw;
   position: relative;
-  height: 200px;
+  height: 30vw;
 }
 
 .fadein-slider img {
@@ -212,12 +220,8 @@ body {
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
-
-	min-width: 100%;
-	min-height: 100%;
-
-	width: 100%;
-	height: auto;
+	width: auto;
+	height: 100%;
 }
 
 .fadein-slider-item {
@@ -225,4 +229,31 @@ body {
   width: 100%;
   height: 100%;
   opacity: 0;
+}
+
+@media screen and (max-width: 576px){
+	.close-button {
+		font-size: 1em;
+	}
+
+	.cardtable-warpper {
+		height: auto;
+	}
+
+	.cardtable {
+		display: block;
+	}
+
+	.card {
+		display: flex;
+	}
+
+	.fadein-slider {
+		height: 150px;
+	}
+
+	.fadein-slider .caption {
+		font-size: 1.5em;
+	}
+
 }
