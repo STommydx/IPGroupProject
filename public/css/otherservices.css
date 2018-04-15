@@ -3,6 +3,7 @@
 }
 
 body {
+    min-width: 375px;
     padding: 0;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
@@ -25,12 +26,7 @@ body {
     float: left;
 }
 
-@media screen and (max-width: 800px) {
-    .col {
-        width: 100%;
-        padding-bottom: 20px;
-    }
-}
+
 
 
 /**/
@@ -74,12 +70,11 @@ body {
 .quote-result {
     margin-top: 0;
     max-height: 800px;
-    transition: all 3s;
     overflow: hidden;
 }
 
 .quote-result.hidden {
-    max-height: 0;
+    display: none;
 }
 
 .insurance .row {
@@ -91,12 +86,22 @@ body {
     color: grey;
 }
 
+
+@media screen and (max-width: 800px) {
+    .col {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+    .section {
+        padding: 30px 10px 30px 10px;
+    }
+}
+
 .tab {
     float: left;
     background-color: var(--main-color);
     width: 20%;
     height: 300px;
-
 }
 
 
@@ -132,17 +137,50 @@ body {
 }
 
 
-/* Style the tab content */
-
-.tabcontent {
+.tab > .tabcontent {
     float: left;
     padding: 0px 12px;
-    width: 80%;
-    border: solid 1px var(--main-color);
-    height: 300px;
+    width: 100%;
+    border-right: 1px solid var(--main-color);
+    max-height: 0;
     background-color: white;
+    overflow: hidden;
+    transition: max-height 1s ease-out;
 }
 
+.tabcontent-lg > .tabcontent {
+    width: 70%;
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 70%;
+    border: none;
+    height: 300px;
+    display: none;
+}
+
+.tab > .tabcontent.active {
+    max-height: 400px;
+}
+
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 24px;
+    }
+    .tab {
+        width: 100%;
+        height: auto;
+    }
+
+    .tab button {
+        border-bottom: 3px solid grey;
+    }
+
+    .tab button.active {
+        border-bottom: 3px solid var(--heading-color);
+    }
+}
 
 /**/
 
