@@ -46,9 +46,9 @@ if ((ix = fullVersion.indexOf(" ")) != -1)
   fullVersion = fullVersion.substring(0, ix);
 
 
-alert(
+document.write(
   "Browser name:   " + browserName +
-  "\nBrowser version:   " + fullVersion +
-  "\nOS name:   " + OSName +
-  "\nThis page was last modified on:   " + document.lastModified + ""
+  "|Browser version:   " + fullVersion +
+  "|OS name:   " + OSName +
+  "|Last update on:   " + document.lastModified + ""
 )
