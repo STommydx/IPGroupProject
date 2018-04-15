@@ -9,7 +9,6 @@ body {
 	position: relative;
 	overflow: hidden;
 	width: 100vw;
-	max-height: 40vw;
 }
 
 .slider {
@@ -165,6 +164,7 @@ body {
 }
 
 .card {
+	display: block;
 	position: relative;
 	margin: 0.5em;
 	box-shadow: 1px 1px 1px lightgray;
@@ -212,7 +212,7 @@ body {
   position: relative;*/
   width: 100vw;
   position: relative;
-  height: 200px;
+  height: 30vw;
 }
 
 .fadein-slider img {
@@ -220,12 +220,8 @@ body {
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
-
-	min-width: 100%;
-	min-height: 100%;
-
-	width: 100%;
-	height: auto;
+	width: auto;
+	height: 100%;
 }
 
 .fadein-slider-item {
@@ -239,4 +235,25 @@ body {
 	.close-button {
 		font-size: 1em;
 	}
+
+	.cardtable-warpper {
+		height: auto;
+	}
+
+	.cardtable {
+		display: block;
+	}
+
+	.card {
+		display: flex;
+	}
+
+	.fadein-slider {
+		height: 150px;
+	}
+
+	.fadein-slider .caption {
+		font-size: 1.5em;
+	}
+
 }
