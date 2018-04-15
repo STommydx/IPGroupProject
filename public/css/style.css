@@ -229,10 +229,8 @@ li.dropdown{
 
 .footer {
 	border: none;
-	position: fixed;
 	bottom: 0px;
 	display: block;
-	width: 100vw;
 	height: 50px;
 	overflow: hidden;
 }
