@@ -226,3 +226,11 @@ li.dropdown{
 		background-size: auto;
 	}
 }
+
+.footer {
+	border: none;
+	bottom: 0px;
+	display: block;
+	height: 50px;
+	overflow: hidden;
+}
