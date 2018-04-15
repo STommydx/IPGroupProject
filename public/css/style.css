@@ -246,6 +246,23 @@ li.dropdown{
 	display: none;
 }
 
+.footer {
+	border: none;
+	bottom: 0px;
+	display: block;
+	height: 50px;
+	overflow: hidden;
+}
+
+.circle {
+	width: 20px;
+	height: 20px;
+	background-color: lightblue;
+	border: 1px solid blue;
+	position: absolute;
+	border-radius: 15px;
+}
+
 @media screen and (max-width: 576px){
 
 	.top {
@@ -279,21 +296,8 @@ li.dropdown{
 		display: none;
 	}
 
-}
+	.footer {
+		display: none;
+	}
 
-.footer {
-	border: none;
-	bottom: 0px;
-	display: block;
-	height: 50px;
-	overflow: hidden;
-}
-
-.circle {
-	width: 20px;
-	height: 20px;
-	background-color: lightblue;
-	border: 1px solid blue;
-	position: absolute;
-	border-radius: 15px;
 }
