@@ -19,6 +19,9 @@ body {
 }
 
 .navbar ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 100%;
 	text-align: center;
 	list-style: none;
@@ -28,10 +31,11 @@ body {
 }
 
 .navbar ul li {
-	font-size: 1.2em;
+	display: flex;
+	justify-content: center;
+	font-size: 1.1em;
 	font-family: helvetica;
 	color: grey;
-	display: inline-block;
 	/*width: 20%;*/
 	text-align: center;
 	padding: 5px;
@@ -45,6 +49,11 @@ a {
 a:hover {
 	text-decoration: none;
 	color: grey;
+}
+
+img {
+	height: 1em;
+	width: 1em;
 }
 
 .browserinfo {
