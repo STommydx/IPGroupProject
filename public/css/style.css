@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 body{
 	margin: 0;
 	overflow: hidden;
+	font-family: 'Roboto', sans-serif;
 }
 
 .contaniner {
@@ -131,22 +134,30 @@ li.dropdown{
 	top: 0;
 }
 
-.popupcookiebody{font-family: sans-serif;}
-
 .popupcookieform{
   padding: 10px 10px 10px 10px;
 }
 
 .popupclassinput{
-  margin: 10px 10px 10px 10px;
-  box-sizing: border-box;
   width: 55%;
+  border-radius: 2px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: lightgrey;
 }
 
 .popupclassinput1{
-  margin: 10px 10px 10px 10px;
-  box-sizing: border-box;
-  width: 55%;
+	background-color: #87ceeb;
+	border-style: none;
+	color: white;
+	font-size: 0.9em;
+	padding: 0.5em 0.875em;
+	border-radius: 0.2em;
+	transition: background-color 0.25s ease;
+}
+
+.popupclassinput1:hover {
+	background-color: #67becb;
 }
 
 .modal {
