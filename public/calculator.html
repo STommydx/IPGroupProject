@@ -2,16 +2,20 @@
 <html>
 
 <head>
-    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+	<title>Rememeber random generator add seeedddddd ararararar</title>
+    <link rel="stylesheet" type="text/css" href="css/calculator.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 </head>
 
 <body>
+	<h1>Currency Caluclator</h1>
+	<div class="card">
     <p>
-        <label>HKD</label>
+        <label for="inputPounds">HKD</label>
         <input id="inputPounds" type="number" value="1" oninput="convertToForeign()" onchange="convertToForeign()">
     </p>
+	<img class="updown" src="images/path1249.png">
     <p>
         <select id="foreignCurrency">
             <option value="13.70">JPY</option>
@@ -20,6 +24,7 @@
         </select>
         <input id="foreignDollar" type="number" value="1" oninput="convertToHKD()" onchange="convertToForeign()">
     </p>
+	</div>
     <script type="text/javascript">
     function convertToHKD(valNum) {
         document.getElementById("inputPounds").value = document.getElementById("foreignDollar").value / $("#foreignCurrency").val();

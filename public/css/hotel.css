@@ -1,17 +1,29 @@
-/*hotel.css*/
-div.filter {
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+	font-family: 'Roboto', sans-serif;
+	margin: 1em;
+}
+
+.filter {
      padding: 10px;
      margin: 0px;
      background-color: #9596FA;
+	 box-shadow: 1px 1px 1px lightgrey;
+	 display: flex;
+	 flex-wrap: wrap;
 }
 
 div.hotel_list {
      background-color: #E6FBFC;
+	 box-shadow: 1px 1px 1px lightgrey;
+	 padding: 0.5em;
 }
 
 img {
      width: 300px;
      height: 150px;
+	 border-radius: 0.2em;
 }
 
 td.price {
@@ -20,4 +32,68 @@ td.price {
 
 table {
      border-collapse: collapse;
+}
+
+.rating {
+	height: 1.2em;
+	width: auto;
+}
+
+input[type='text'], input[type='date'], select {
+	border-radius: 2px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: lightgrey;
+	width: 50%;
+}
+
+.filter-item {
+	padding: 0.5em;
+	width: 50%;
+	box-sizing: border-box;
+	display: flex;
+}
+
+label {
+	margin-right: 1em;
+	width: 50%;
+}
+
+.hotel_list input[type='button'] {
+	border-width: 0px;
+	background-color: #ff4d4d;
+	color: white;
+	padding: 0.5em 0.875em;
+	font-size: 1em;
+	box-shadow: 2px 2px 2px lightgray;
+	transition: background-color 0.25s ease;
+}
+
+.hotel_list input[type='button']:hover {
+	background-color: #dd2d2d;
+}
+
+
+.search-button {
+	border-width: 0px;
+	border-radius: 0.2em;
+	margin: 0.2em;
+	background-color: #4d4d4d;
+	color: white;
+	padding: 0.5em 0.875em;
+	font-size: 0.9em;
+	box-shadow: 0;
+	transition: background-color 0.25s ease;
+}
+
+.search-button:hover {
+	background-color: #2d2d2d;
+}
+
+@media screen and (max-width: 576px){
+
+	.filter-item {
+		width: 100%;
+	}
+
 }

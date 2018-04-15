@@ -44,10 +44,9 @@ if ((ix = fullVersion.indexOf(";")) != -1)
 if ((ix = fullVersion.indexOf(" ")) != -1)
   fullVersion = fullVersion.substring(0, ix);
 
-
-document.write(
-  "Browser name:   " + browserName +
-  "  |Browser version:   " + fullVersion +
-  "  |OS name:   " + OSName +
-  "  |Last update on:   " + document.lastModified
-)
+$(document).ready(() => {
+	$('.browserinfo').text("Browser name:   " + browserName +
+    "  | Browser version:   " + fullVersion +
+    "  | OS name:   " + OSName +
+    "  | Last update on:   " + document.lastModified);
+});

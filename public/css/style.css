@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 body{
 	margin: 0;
 	overflow: hidden;
+	font-family: 'Roboto', sans-serif;
 }
 
 .contaniner {
@@ -51,6 +54,7 @@ li a, .dropbtn{
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
+	transition: background-color 0.2s ease;
 }
 
 .navhighline:hover, .dropdown:hover .dropbtn{
@@ -131,22 +135,30 @@ li.dropdown{
 	top: 0;
 }
 
-.popupcookiebody{font-family: sans-serif;}
-
 .popupcookieform{
   padding: 10px 10px 10px 10px;
 }
 
 .popupclassinput{
-  margin: 10px 10px 10px 10px;
-  box-sizing: border-box;
   width: 55%;
+  border-radius: 2px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: lightgrey;
 }
 
 .popupclassinput1{
-  margin: 10px 10px 10px 10px;
-  box-sizing: border-box;
-  width: 55%;
+	background-color: #87ceeb;
+	border-style: none;
+	color: white;
+	font-size: 0.9em;
+	padding: 0.5em 0.875em;
+	border-radius: 0.2em;
+	transition: background-color 0.25s ease;
+}
+
+.popupclassinput1:hover {
+	background-color: #67becb;
 }
 
 .modal {
@@ -235,6 +247,23 @@ li.dropdown{
 	display: none;
 }
 
+.footer {
+	border: none;
+	bottom: 0px;
+	display: block;
+	height: 50px;
+	overflow: hidden;
+}
+
+.circle {
+	width: 20px;
+	height: 20px;
+	background-color: lightblue;
+	border: 1px solid blue;
+	position: absolute;
+	border-radius: 15px;
+}
+
 @media screen and (max-width: 576px){
 
 	.top {
@@ -268,21 +297,8 @@ li.dropdown{
 		display: none;
 	}
 
-}
+	.footer {
+		display: none;
+	}
 
-.footer {
-	border: none;
-	bottom: 0px;
-	display: block;
-	height: 50px;
-	overflow: hidden;
-}
-
-.circle {
-	width: 20px;
-	height: 20px;
-	background-color: lightblue;
-	border: 1px solid blue;
-	position: absolute;
-	border-radius: 15px;
 }

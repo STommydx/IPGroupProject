@@ -7,6 +7,7 @@
 .wrapper > div{
   background:rgb(238, 255, 212);
   padding:2em;
+  border: solid 1px lightgray;
 }
 
 .wrapper > div:nth-child(odd){
