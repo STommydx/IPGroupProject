@@ -77,6 +77,8 @@ body {
 	font-weight: bold;
 	line-height: 1em;
 	opacity: 0.85;
+	user-select: none;
+	-moz-user-select: none;
 }
 
 .caption-left {
