@@ -90,6 +90,11 @@ body {
 	right: 11%;
 }
 
+.drawer a {
+	display: flex;
+	align-items: center;
+}
+
 .blue {
 	color: #011f4b;
 }
