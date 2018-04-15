@@ -28,10 +28,8 @@ body{
 }
 
 .header{
-	font-family: comic sans ms;
-	font-size: 2em;
-	color: white;
-	padding: 20px 16px;
+	height: 80px;
+	margin: 5px;
 }
 
 .nav{
@@ -119,6 +117,7 @@ li.dropdown{
 	display: flex;
 	position: relative;
 	overflow: hidden;
+	background-size: cover;
 }
 
 .liveclock {
@@ -220,3 +219,10 @@ li.dropdown{
     width: 90%;
     height: auto;
   }
+
+@media screen and (max-width: 576px) {
+	.top {
+		justify-content: center;
+		background-size: auto;
+	}
+}
