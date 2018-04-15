@@ -3,3 +3,9 @@ var updateClock = function() {
 }
 
 setInterval(updateClock, 250);
+
+$(document).ready(() => {
+	$('.nav-toggle').click(() => {
+		$('.nav').slideToggle();
+	});
+});

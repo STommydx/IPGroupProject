@@ -222,10 +222,18 @@ li.dropdown{
     height: auto;
   }
 
-.float-right {
+.nav .float-right {
 	float: right;
 }
 
+.nav-warpper {
+	background-color: #333;
+}
+
+.nav-toggle {
+	text-align: center;
+	display: none;
+}
 
 @media screen and (max-width: 576px){
 
@@ -246,6 +254,16 @@ li.dropdown{
 	.dropdown-content {
 		position: relative;
 	}
+
+	.nav-toggle {
+		text-align: center;
+		display: block;
+	}
+
+	.nav .float-right {
+		float: none;
+	}
+
 }
 
 .footer {
