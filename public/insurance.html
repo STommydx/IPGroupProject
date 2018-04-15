@@ -41,51 +41,142 @@
     <div class="insurance section">
         <div id="insuranceLink"></div>
         <h1>Insurance policy details</h1>
+        <!--  -->
+        <!-- <div class="row">
+            <div class="tab">
+                <button>Coverage</button>
+                <div class="tabcontent">
+                    <p>Medical expenses up to HKD 1 billion</p>
+                    <p>Baggage loss or damage up to HKD 100,000</p>
+                    <p>Golfing hole-in-one</p>
+                    <p>Flight Delays</p>
+                </div>
+                <button>Major exclusions</button>
+                <div class="tabcontent">
+                    <p>Natural Disasters</p>
+                    <p>Riots</p>
+                    <p>Hazardous sports such as cycling with Bacon</p>
+                </div>
+                <button>Eligibility</button>
+                <div class="tabcontent">
+                    <p>No criminal background</p>
+                    <p>Aged below 100</p>
+                </div>
+            </div>
+            <div class="tabcontent-lg">
+                
+            </div>
+        </div> -->
+        <!--  -->
         <div class="row">
             <div class="tab">
-                <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Coverage</button>
-                <button class="tablinks" onclick="openCity(event, 'Paris')">Major exclusions</button>
-                <button class="tablinks" onclick="openCity(event, 'Tokyo')">Eligibility</button>
+                <button>Coverage</button>
+                <div class="tabcontent">
+                    <p>Medical expenses up to HKD 1 billion</p>
+                    <p>Baggage loss or damage up to HKD 100,000</p>
+                    <p>Golfing hole-in-one</p>
+                    <p>Flight Delays</p>
+                </div>
+                <button>Major exclusions</button>
+                <div class="tabcontent">
+                    <p>Natural Disasters</p>
+                    <p>Riots</p>
+                    <p>Hazardous sports such as cycling with Bacon</p>
+                </div>
+                <button>Eligibility</button>
+                <div class="tabcontent">
+                    <p>No criminal background</p>
+                    <p>Aged below 100</p>
+                </div>
             </div>
-            <div id="London" class="tabcontent">
-                <p>Medical expenses up to HKD 1 billion</p>
-                <p>Baggage loss or damage up to HKD 100,000</p>
-                <p>Golfing hole-in-one</p>
-                <p>Flight Delays</p>
-            </div>
-            <div id="Paris" class="tabcontent">
-                <p>Natural Disasters</p>
-                <p>Riots</p>
-                <p>Hazardous sports such as cycling with Bacon</p>
-            </div>
-            <div id="Tokyo" class="tabcontent">
-                <p>No criminal background</p>
-                <p>Aged below 100</p>
-            </div>
+            <div class="tabcontent-lg"></div>
         </div>
+
+
+
     </div>
     <script>
-    function openCity(evt, cityName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        document.getElementById(cityName).style.display = "block";
-        evt.currentTarget.className += " active";
+    const   sizeThreshold = 600;
+    var     toggleTabContent;
+    var toggleLargeTabContent = function(button) {
+        $('.tabcontent-lg > .tabcontent').each(function(){
+            $(this).css({
+                display: 'none',
+            });
+        });
+        
+        var index = $('.tab > button').index(button);
+        $('.tabcontent-lg > .tabcontent').eq(index).css({
+            display: 'block'
+        });;
     }
 
-    // Get the element with id="defaultOpen" and click on it
-    document.getElementById("defaultOpen").click();
+    var toggleSmallTabContent = function(button) {
+        $('.tab > .tabcontent').each(function(){
+            $(this).removeClass('active');
+        });
+        button.next('.tabcontent').toggleClass('active');
 
-    // 
+    }
+
+    function init() {
+        $('.tab > .tabcontent').each(function() {
+            $('.tabcontent-lg').append($(this).clone(true));
+        });
+        setSizeConfig();
+    }
+
+    function setSizeConfig() {
+        if (window.innerWidth >= sizeThreshold) {
+            toggleTabContent = toggleLargeTabContent;
+            $('.tab > .tabcontent').each(function(){
+                $(this).removeClass('active');
+            });
+            $('.tabcontent-lg').css({
+                display: ''
+            });
+            $('.tab > button:first').trigger('click');
+        }
+        else {
+            toggleTabContent = toggleSmallTabContent;
+            $('.tabcontent-lg').css({
+                display: 'none'
+            });
+            $('.tab > button').each(function(){
+            $(this).removeClass('active');
+        });
+        }
+    }
+
+    $(window).resize(function(){
+        setSizeConfig();
+    });
+
+    $('.tab > button').click(function(){
+        toggleButton($(this));
+        toggleTabContent($(this));
+    })
+
+    function toggleButton(button) {
+        $('.tab > button').each(function(){
+            $(this).removeClass('active');
+        });
+        button.toggleClass('active');
+    }
+
+    
+
+    // $('.tab > button').click(function(){
+    //     $(this).toggleClass('active');
+    //     $(this).next('.tabcontent').toggleClass('active');
+    // })
+
     $('.button').click(function() {
+        
         $('.quote-result').toggleClass('hidden');
     });
+
+    init();
     </script>
 </body>
 
