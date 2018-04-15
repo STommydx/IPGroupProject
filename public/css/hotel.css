@@ -59,6 +59,37 @@ label {
 	width: 50%;
 }
 
+.hotel_list input[type='button'] {
+	border-width: 0px;
+	background-color: #ff4d4d;
+	color: white;
+	padding: 0.5em 0.875em;
+	font-size: 1em;
+	box-shadow: 2px 2px 2px lightgray;
+	transition: background-color 0.25s ease;
+}
+
+.hotel_list input[type='button']:hover {
+	background-color: #dd2d2d;
+}
+
+
+.search-button {
+	border-width: 0px;
+	border-radius: 0.2em;
+	margin: 0.2em;
+	background-color: #4d4d4d;
+	color: white;
+	padding: 0.5em 0.875em;
+	font-size: 0.9em;
+	box-shadow: 0;
+	transition: background-color 0.25s ease;
+}
+
+.search-button:hover {
+	background-color: #2d2d2d;
+}
+
 @media screen and (max-width: 576px){
 
 	.filter-item {

@@ -41,3 +41,17 @@ del{
     text-decoration: line-through;
     text-decoration-color: red;
 }
+
+input[type='button'] {
+	border-width: 0px;
+	background-color: #4d4dff;
+	color: white;
+	padding: 0.5em 0.875em;
+	font-size: 1em;
+	box-shadow: 2px 2px 2px lightgray;
+	transition: background-color 0.25s ease;
+}
+
+input[type='button']:hover {
+	background-color: #2d2ddd;
+}
