@@ -18,56 +18,31 @@
             <div class="col">
                 <h2>About your trip</h2>
                 <h3>Where are you travelling?</h3>
-                <input type="radio" value="area1" name="areaType">Asia only
-                <input type="radio" value="area2" name="areaType">Worldwide
+                    <input type="radio" value=1 name="areaType">Asia only
+                    <input type="radio" value=3 name="areaType">Worldwide
                 <h3>Departure date</h3>
-                <!-- TODO Restrict the date -->
-                <input type="date" value="1">
+                <input id="depatureDate" type="date">
             </div>
             <div class="col">
                 <h2>Choose who to cover</h2>
                 <h3>How many people are travelling?</h3>
-                <input type="number" value="1">
+                <input id="headCount" type="number" value="1" min="1">
             </div>
         </div>
+        <p id="warning" style="display: none; color: var(--heading-color);">
+            Please input all information.
+        </p>
         <div class="button">Get a quote</div>
         <!-- Quote detail -->
     </div>
     <div class="quote-result section hidden">
         <h1>Your quote</h1>
-        <p>$300</p>
+        <p id="quotePrice"></p>
     </div>
     <!-- Insurance detail -->
     <div class="insurance section">
         <div id="insuranceLink"></div>
         <h1>Insurance policy details</h1>
-        <!--  -->
-        <!-- <div class="row">
-            <div class="tab">
-                <button>Coverage</button>
-                <div class="tabcontent">
-                    <p>Medical expenses up to HKD 1 billion</p>
-                    <p>Baggage loss or damage up to HKD 100,000</p>
-                    <p>Golfing hole-in-one</p>
-                    <p>Flight Delays</p>
-                </div>
-                <button>Major exclusions</button>
-                <div class="tabcontent">
-                    <p>Natural Disasters</p>
-                    <p>Riots</p>
-                    <p>Hazardous sports such as cycling with Bacon</p>
-                </div>
-                <button>Eligibility</button>
-                <div class="tabcontent">
-                    <p>No criminal background</p>
-                    <p>Aged below 100</p>
-                </div>
-            </div>
-            <div class="tabcontent-lg">
-                
-            </div>
-        </div> -->
-        <!--  -->
         <div class="row">
             <div class="tab">
                 <button>Coverage</button>
@@ -91,20 +66,17 @@
             </div>
             <div class="tabcontent-lg"></div>
         </div>
-
-
-
     </div>
     <script>
-    const   sizeThreshold = 600;
-    var     toggleTabContent;
+    const sizeThreshold = 600;
+    var toggleTabContent;
     var toggleLargeTabContent = function(button) {
-        $('.tabcontent-lg > .tabcontent').each(function(){
+        $('.tabcontent-lg > .tabcontent').each(function() {
             $(this).css({
                 display: 'none',
             });
         });
-        
+
         var index = $('.tab > button').index(button);
         $('.tabcontent-lg > .tabcontent').eq(index).css({
             display: 'block'
@@ -112,7 +84,7 @@
     }
 
     var toggleSmallTabContent = function(button) {
-        $('.tab > .tabcontent').each(function(){
+        $('.tab > .tabcontent').each(function() {
             $(this).removeClass('active');
         });
         button.next('.tabcontent').toggleClass('active');
@@ -123,57 +95,66 @@
         $('.tab > .tabcontent').each(function() {
             $('.tabcontent-lg').append($(this).clone(true));
         });
+        setMinToday();
         setSizeConfig();
+    }
+
+    function setMinToday() {
+        var now = new Date(),
+            minDate = now.toISOString().substring(0, 10);
+        $('#depatureDate').prop('min', minDate);
     }
 
     function setSizeConfig() {
         if (window.innerWidth >= sizeThreshold) {
             toggleTabContent = toggleLargeTabContent;
-            $('.tab > .tabcontent').each(function(){
+            $('.tab > .tabcontent').each(function() {
                 $(this).removeClass('active');
             });
             $('.tabcontent-lg').css({
                 display: ''
             });
             $('.tab > button:first').trigger('click');
-        }
-        else {
+        } else {
             toggleTabContent = toggleSmallTabContent;
             $('.tabcontent-lg').css({
                 display: 'none'
             });
-            $('.tab > button').each(function(){
-            $(this).removeClass('active');
-        });
+            $('.tab > button').each(function() {
+                $(this).removeClass('active');
+            });
         }
     }
 
-    $(window).resize(function(){
+    $(window).resize(function() {
         setSizeConfig();
     });
 
-    $('.tab > button').click(function(){
+    $('.tab > button').click(function() {
         toggleButton($(this));
         toggleTabContent($(this));
     })
 
     function toggleButton(button) {
-        $('.tab > button').each(function(){
+        $('.tab > button').each(function() {
             $(this).removeClass('active');
         });
         button.toggleClass('active');
     }
 
-    
-
-    // $('.tab > button').click(function(){
-    //     $(this).toggleClass('active');
-    //     $(this).next('.tabcontent').toggleClass('active');
-    // })
-
     $('.button').click(function() {
-        
-        $('.quote-result').toggleClass('hidden');
+        var isChecked = $('input[name="areaType"]:checked').length > 0 && $("#depatureDate").val() != ""
+        if (isChecked) {
+            $('.quote-result').toggleClass('hidden');
+            $('#warning').css({
+                display: 'none'
+            });
+            quotePrice.innerHTML = $('#headCount').val() * $('input[name="areaType"]:checked').val() * 300;
+        } else {
+            $('#warning').css({
+                display: ''
+            });
+        }
     });
 
     init();
